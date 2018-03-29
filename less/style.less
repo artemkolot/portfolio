@@ -1,0 +1,57 @@
+header{
+	nav{
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		/* Кнопка меню */
+		.menu-button{
+			cursor: pointer;
+			display: inline-block;
+			vertical-align:top;//убираем отступ с низу у inline-block
+			&:hover{
+				span.menu-line>span{
+					left: 0;	
+				}
+			}
+			/* Булые спаны */
+			span.menu-line{
+				height: 5px;
+				width: 30px;
+				background: white;
+				display: block;
+				position: relative;
+				overflow: hidden;
+				&.mid{
+					margin: 4px 0;
+				}
+				/* Синий спаны */
+				span{
+					transition: left 0.3s ease-out 0s;
+					position: absolute;
+					top: 0;
+					left: -30px;
+					height: inherit;
+					width: inherit;
+					background: #0FAEDE;
+					&.mid{
+						transition-delay: 0.1s;
+					}
+					&.bot{
+						transition-delay: 0.3s;
+					}
+				}
+			}
+		}
+	}
+	.masthead{
+		height: 100vh;
+		background: url(../img/mastheadbg.jpg) fixed;
+		background-size: cover;
+		color: #fff;
+	}
+}
+.test{
+	height: 100px;
+	width: 100%;
+	background: #2B2B2B;
+}
