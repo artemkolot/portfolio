@@ -92,22 +92,15 @@ header{
 			font-size: 2em;
 		}
 		.go-down{
-			padding-bottom: 10px;
-			position: relative;
-			width: 100%;	
-			height: 70px;	
-			a{
-				position: absolute;	
-				bottom: 0;	
-				left: 50%;	
-				margin-left: -40px;	
+			padding-bottom: 10px;	
+			a{	
 				color: #fff;
 				text-align: center;
 				i{
-					/* font-size: 4em;
-					-webkit-animation: 4s linear 0s infinite alternate finger_tuch;
+					font-size: 5em;
+				/* 	-webkit-animation: 4s linear 0s infinite alternate finger_tuch;
 					     			-moz-animation: 4s linear 0s infinite alternate finger_tuch;
-					      			 -o-animation: 4s linear 0s infinite alternate finger_tuch */;
+					      			 -o-animation: 4s linear 0s infinite alternate finger_tuch ; */
 	         		 animation: 1s cubic-bezier(0, 2.23, 0.17, 2.23) 0s infinite finger_tuch;
 				}
 			}
@@ -121,8 +114,14 @@ header{
 }
 
 @keyframes finger_tuch{
- from {font-size:3em;}
- to {font-size: 4em;}
+0%{
+	transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+}
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
 }
 @-webkit-keyframes finger_tuch {
  from {font-size:3em;}
