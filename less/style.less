@@ -1,10 +1,44 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@OpenSans: 'Open Sans', sans-serif; //font-family;
+
 header{
 	nav{
-		position: absolute;
-		top: 40px;
-		left: 40px;
-		/* Кнопка меню */
+		position: absolute !important;
+		top: 0;
+		left: 0;
+		//border: 2px solid red;
+		ul.menu-list{
+			//border: 1px solid #fff;
+			padding: 20px;
+			margin: 0;
+			li{
+				list-style: none;
+				//border: 1px solid #ccc;
+				text-align: center;
+				padding: 10px;
+				margin-right: 40px;
+				a{
+					color: #FFF;
+					text-decoration: none;
+					font-family: @OpenSans;
+					font-weight: 300;
+					font-size: 1em;
+					outline: none;
+					&:hover{
+						color:#ccc;
+					}
+				}
+			}
+		}
+		
+	}
+	//Кнопка меню
 		.menu-button{
+			position: absolute;
+			top: 40px;
+			left: 40px;
+			z-index: 999;
 			cursor: pointer;
 			display: inline-block;
 			vertical-align:top;//убираем отступ с низу у inline-block
@@ -13,7 +47,7 @@ header{
 					left: 0;	
 				}
 			}
-			/* Булые спаны */
+			/* Белые спаны */
 			span.menu-line{
 				height: 5px;
 				width: 30px;
@@ -41,17 +75,54 @@ header{
 					}
 				}
 			}
-		}
-	}
+		}//кнопка меню
 	.masthead{
 		height: 100vh;
 		background: url(../img/mastheadbg.jpg) fixed;
 		background-size: cover;
 		color: #fff;
+		font-family: @OpenSans;
+		h1{
+			font-weight: 400;
+			font-size: 3em;
+		}
+		h2{
+			font-weight: 300;
+			text-transform: lowercase;
+			font-size: 2em;
+		}
+		.go-down{
+			padding-bottom: 10px;
+			position: absolute;
+			i{
+				/* font-size: 4em;
+				-webkit-animation: 4s linear 0s infinite alternate finger_tuch;
+				     			-moz-animation: 4s linear 0s infinite alternate finger_tuch;
+				      			 -o-animation: 4s linear 0s infinite alternate finger_tuch */;
+         		 animation: 1s cubic-bezier(0, 2.23, 0.17, 2.23) 0s infinite finger_tuch;
+			}
+		}
 	}
 }
 .test{
 	height: 100px;
 	width: 100%;
 	background: #2B2B2B;
+}
+
+@keyframes finger_tuch{
+ from {font-size:3em;}
+ to {font-size: 4em;}
+}
+@-webkit-keyframes finger_tuch {
+ from {font-size:3em;}
+ to {font-size: 4em;}
+}
+@-moz-keyframes finger_tuch{
+ from {font-size:3em;}
+ to {font-size: 4em;}
+}
+ @-o-{
+ from {font-size:3.4em;}
+ to {font-size: 4.2em;}
 }
