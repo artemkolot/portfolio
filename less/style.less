@@ -98,9 +98,9 @@ header{
 				text-align: center;
 				i{
 					font-size: 70px;
-				/* 	-webkit-animation: 4s linear 0s infinite alternate finger_tuch;
-					     			-moz-animation: 4s linear 0s infinite alternate finger_tuch;
-					      			 -o-animation: 4s linear 0s infinite alternate finger_tuch ; */
+					-webkit-animation: 1s linear 0s infinite  finger_tuch;
+	     			-moz-animation: 1s linear 0s infinite  finger_tuch;
+	      			 -o-animation: 1s linear 0s infinite  finger_tuch ;
 	         		 animation: 1s cubic-bezier(0, 2.23, 0.17, 2.23) 0s infinite finger_tuch;
 				}
 			}
@@ -124,14 +124,32 @@ header{
     }
 }
 @-webkit-keyframes finger_tuch {
- from {font-size:3em;}
- to {font-size: 4em;}
+0%{
+	transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+}
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
 }
 @-moz-keyframes finger_tuch{
- from {font-size:3em;}
- to {font-size: 4em;}
+0%{
+	transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+}
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
 }
  @-o-{
- from {font-size:3.4em;}
- to {font-size: 4.2em;}
+0%{
+	transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+}
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
 }
