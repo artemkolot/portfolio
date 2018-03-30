@@ -3,7 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Artem Kolot portfolio</title>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet/less" type="text/css" href="less/style.less">
@@ -19,6 +22,20 @@
 	<!-- Font Material -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <script>
+		$(document).ready(function(){
+			$(".go-down").on("click","a", function (event) {
+				//отменяем стандартную обработку нажатия по ссылке
+				event.preventDefault();
+				//забираем идентификатор бока с атрибута href
+				var id  = $(this).attr('href'),
+				//узнаем высоту от начала страницы до блока на который ссылается якорь
+					top = $(id).offset().top;
+				//анимируем переход на расстояние - top за 1500 мс
+				$('body,html').animate({scrollTop: top}, 1100);
+			});
+		});
+      </script>
 </head>
 <body>
 	<div class="container-fluid main-wrapper">
@@ -52,11 +69,13 @@
 					<h2>Frontend/Backend Developer</h2>
 				</div>
 				<div class="w-100"></div>
-				<div class="go-down col-2 align-self-end"><i class="material-icons">fingerprint</i></div>
+				<div class="go-down align-self-end"><a href="#test"><i class="material-icons">fingerprint</i></a></div>
 			</div>
 		</header>
 		<div class="row">
-			<div class="test"></div>
+			<div class="test" id="test">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem aperiam illo corporis ipsam rem nesciunt quis dignissimos officiis quia labore. Fugiat minima, vel quisquam exercitationem ipsum labore ipsam porro inventore?
+			</div>
 		</div>
 	</div>
 </body>
