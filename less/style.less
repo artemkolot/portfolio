@@ -84,12 +84,12 @@ header{
 		font-family: @OpenSans;
 		h1{
 			font-weight: 400;
-			font-size: 3em;
+			font-size: 2.5em;
 		}
 		h2{
 			font-weight: 300;
 			text-transform: lowercase;
-			font-size: 2em;
+			font-size: 1.5em;
 		}
 		.go-down{
 			padding-bottom: 10px;	
@@ -104,6 +104,10 @@ header{
 	         		 animation: 1s cubic-bezier(0, 2.23, 0.17, 2.23) 0s infinite finger_tuch;
 				}
 			}
+		}
+		@media screen and (max-width: 768px){
+			background: url(../img/mastheadbg.jpg) no-repeat right;
+			background-size: cover;
 		}
 	}
 }
