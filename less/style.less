@@ -92,8 +92,11 @@ header{
 		}//кнопка меню
 	.masthead{
 		height: 100vh;
-		background: url(../img/mastheadbg28.jpg) fixed;
+		background: url(../img/mastheadbg28.jpg) no-repeat fixed;
 		background-position: bottom;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
 		background-size: cover;
 		color: #fff;
 		font-family: @OpenSans;
@@ -115,7 +118,7 @@ header{
 			}	
 		}
 		.go-down{
-			padding-bottom: 10px;	
+			padding-bottom: 30px;	
 			position: absolute;
 			a{	
 				color: #fff;
@@ -139,7 +142,10 @@ header{
 			background-size: cover;
 			.masthead-text{
 				h1{
-					//text-shadow:none;
+					font-size: 6em;
+				}
+				h2{
+					font-size: 2em;
 				}
 			}
 
@@ -150,7 +156,7 @@ header{
 	background: #2B2B2B;
 	height: 715px;
 	.test{
-		height: 800px;
+		height: 50vh;
 		background: #fff;
 		border: 1px solid #000;
 		color: #000;
