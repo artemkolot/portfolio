@@ -2,14 +2,27 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 @OpenSans: 'Open Sans', sans-serif; //font-family;
 
+//COlORS
+@MainColor: #957B5F;
+html{
+	font-size: 10px;
+}
+
 header{
 	nav{
-		position: absolute !important;
+		//position:fixed;
+		position: absolute;
 		top: 0;
 		left: 0;
-		//border: 2px solid red;
+		z-index: 9999;
+		width: 100%;
+		background: transparent;
+		transition: background 0.4s ease;
+/* 		&.active{
+	transition: background 0.4s ease;
+	background: #2C2C2C;
+} */
 		ul.menu-list{
-			//border: 1px solid #fff;
 			padding: 20px;
 			margin: 0;
 			li{
@@ -22,8 +35,9 @@ header{
 					color: #FFF;
 					text-decoration: none;
 					font-family: @OpenSans;
-					font-weight: 300;
-					font-size: 1em;
+					font-weight: 400;
+					font-size: 1.4em;
+					//text-transform: uppercase;
 					outline: none;
 					&:hover{
 						color:#ccc;
@@ -36,8 +50,8 @@ header{
 	//Кнопка меню
 		.menu-button{
 			position: absolute;
-			top: 40px;
-			left: 40px;
+			top: 2em;
+			left: 2em;
 			z-index: 999;
 			cursor: pointer;
 			display: inline-block;
@@ -78,82 +92,81 @@ header{
 		}//кнопка меню
 	.masthead{
 		height: 100vh;
-		background: url(../img/mastheadbg.jpg) fixed;
+		background: url(../img/mastheadbg28.jpg) fixed;
+		background-position: bottom;
 		background-size: cover;
 		color: #fff;
 		font-family: @OpenSans;
-		h1{
-			font-weight: 400;
-			font-size: 2.5em;
-		}
-		h2{
-			font-weight: 300;
-			text-transform: lowercase;
-			font-size: 1.5em;
+		.masthead-text{
+			display: inline-block;
+			padding: 2.5em 4em;
+			h1{
+				font-weight: 700;
+				font-size: 9em;
+				// text-shadow: -1px 2px 6px #000;
+			}
+			h2{
+				font-weight: 300;
+				font-size: 2.5em;
+			}
+			span{
+				font-weight: 700;
+				//color: #2B2B2B;		
+			}	
 		}
 		.go-down{
 			padding-bottom: 10px;	
+			position: absolute;
 			a{	
 				color: #fff;
 				text-align: center;
+				outline: none;
+				img{
+					width: 6em;
+				}
 				i{
-					font-size: 70px;
-					-webkit-animation: 1s linear 0s infinite  finger_tuch;
-	     			-moz-animation: 1s linear 0s infinite  finger_tuch;
-	      			 -o-animation: 1s linear 0s infinite  finger_tuch ;
-	         		 animation: 1s cubic-bezier(0, 2.23, 0.17, 2.23) 0s infinite finger_tuch;
+					font-size: 6em;
+					-webkit-animation: 0.9s cubic-bezier(0, 0, 0, 0) infinite finger_tuch;
+	     			-moz-animation: 0.9s cubic-bezier(0, 0, 0, 0) infinite finger_tuch;
+	      			 -o-animation: 0.9s cubic-bezier(0, 0, 0, 0) infinite finger_tuch;
+	         		 animation: 0.9s cubic-bezier(0, 0, 0, 0) infinite finger_tuch;
 				}
 			}
 		}
-		@media screen and (max-width: 768px){
-			background: url(../img/mastheadbg.jpg) no-repeat right;
+
+		@media screen and (max-width: 576px){
+			background-position: center;
 			background-size: cover;
+			.masthead-text{
+				h1{
+					//text-shadow:none;
+				}
+			}
+
 		}
 	}
 }
-.test{
-	height: 1000px;
-	width: 100%;
+.skills{
 	background: #2B2B2B;
+	height: 715px;
+	.test{
+		height: 800px;
+		background: #fff;
+		border: 1px solid #000;
+		color: #000;
+		position: relative;
+		top: -85px;
+		//padding: 10%;
+	}
 }
 
 @keyframes finger_tuch{
 0%{
-	transform: scale(0.9);
-        -webkit-transform: scale(0.9);
+	transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
 }
     100% {
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0);
-    }
-}
-@-webkit-keyframes finger_tuch {
-0%{
-	transform: scale(0.9);
-        -webkit-transform: scale(0.9);
-}
-    100% {
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0);
-    }
-}
-@-moz-keyframes finger_tuch{
-0%{
-	transform: scale(0.9);
-        -webkit-transform: scale(0.9);
-}
-    100% {
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0);
-    }
-}
- @-o-{
-0%{
-	transform: scale(0.9);
-        -webkit-transform: scale(0.9);
-}
-    100% {
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0);
+	transform: translateY(3px);
+    -webkit-transform: translateY(3px);
     }
 }

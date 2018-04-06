@@ -9,6 +9,7 @@
   crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet/less" type="text/css" href="less/fonts.less">
 	<link rel="stylesheet/less" type="text/css" href="less/style.less">
 	<script type="text/javascript" src="js/less.js"></script>
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
@@ -22,20 +23,6 @@
 	<!-- Font Material -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-      <script>
-		$(document).ready(function(){
-			$(".go-down").on("click","a", function (event) {
-				//отменяем стандартную обработку нажатия по ссылке
-				event.preventDefault();
-				//забираем идентификатор бока с атрибута href
-				var id  = $(this).attr('href'),
-				//узнаем высоту от начала страницы до блока на который ссылается якорь
-					top = $(id).offset().top;
-				//анимируем переход на расстояние - top за 1500 мс
-				$('body,html').animate({scrollTop: top}, 1100);
-			});
-		});
-      </script>
 </head>
 <body>
 	<div class="container-fluid main-wrapper">
@@ -52,31 +39,43 @@
 						<span class="bot"></span>
 					</span>
 				</div>
-				<nav class="col">
+				<nav>
 					<ul class="menu-list d-sm-block d-none">
-						<div class="row">
-							<li class="col-sm-auto col-md-auto col-12"><a href="#">About me</a></li>
-							<li class="col-sm-auto col-md-auto col-12"><a href="#">Skills</a></li>
-							<li class="col-sm-auto col-md-auto col-12"><a href="#">Portfolio</a></li>
-							<li class="col-sm-auto col-md-auto col-12"><a href="#">Contacts</a></li>
+						<div class="row justify-content-end "> <!-- justify-content-end -->
+							<li class="col-sm-auto col-md-auto col-12"><a href="#" target="_blank">About me</a></li>
+							<li class="col-sm-auto col-md-auto col-12"><a href="#" target="_blank">Skills</a></li>
+							<li class="col-sm-auto col-md-auto col-12"><a href="#" target="_blank">Portfolio</a></li>
+							<li class="col-sm-auto col-md-auto col-12"><a href="#" target="_blank">Contacts</a></li>
 						</div>
 					</ul>
 				</nav>
 			</div>
 			<div class="row masthead align-items-center justify-content-center text-center">
-				<div class="col-md-7 col" style="position: absolute;">
-					<h1>I'm Artem Kolot</h1>
-					<h2>Frontend/Backend Developer</h2>
+				<div class="col">
+					<div class="masthead-text">
+						<h1>I'm Artem Kolot.</h1>
+						<h2>Frontend / Backend Developer.</h2>
+					</div>
 				</div>
-				<div class="w-100"></div>
-				<div class="go-down align-self-end"><a href="#test"><i class="material-icons">fingerprint</i></a></div>
+				<div class="go-down align-self-end">
+					<a href="#test" target="_blank">
+						<i class="ka ka-scroll"></i>
+						<!-- <i class="ka ka-finger"></i> -->
+						<!-- For modern browsers. -->
+						<!-- <i class="material-icons">mouse</i> -->
+						<!-- For IE9 or below. -->
+						<!-- <i class="material-icons">&#xE323;</i> -->
+						<!-- <i class="material-icons">fingerprint</i> -->
+					</a>
+				</div>
 			</div>
 		</header>
-		<div class="row">
-			<div class="test" id="test">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem aperiam illo corporis ipsam rem nesciunt quis dignissimos officiis quia labore. Fugiat minima, vel quisquam exercitationem ipsum labore ipsam porro inventore?
+		<div class="skills row justify-content-center">
+			<div class="col" id="test">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur in dolorum consectetur dignissimos doloremque quis inventore dolor incidunt quod aliquam tempore molestiae, corrupti, vero. Illo consectetur dolore impedit ad omnis?
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>
